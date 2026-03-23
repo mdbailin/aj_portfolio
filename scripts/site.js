@@ -57,13 +57,12 @@ export function initSite(activePage) {
     header.innerHTML = `
       <a class="site-mark" href="index.html" aria-label="Go to the home page">
         <span class="site-mark-title">${SITE_CONFIG.site.title}</span>
-        <span class="site-mark-subtitle">${SITE_CONFIG.site.subtitle}</span>
+        ${SITE_CONFIG.site.subtitle ? `<span class="site-mark-subtitle">${SITE_CONFIG.site.subtitle}</span>` : ""}
       </a>
       <nav class="site-nav" aria-label="Primary">
         ${navLink("index.html", "Home", activePage)}
         ${navLink("videos.html", "Videos", activePage)}
         ${navLink("blog.html", "Blog", activePage)}
-        ${navLink("admin.html", "Admin", activePage)}
       </nav>
     `;
   }
