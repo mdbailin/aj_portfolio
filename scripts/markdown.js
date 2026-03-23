@@ -26,6 +26,99 @@ function renderList(items, ordered) {
   return `<${tag}>${rendered}</${tag}>`;
 }
 
+function parseYamlScalar(value) {
+  const trimmed = value.trim();
+  if (!trimmed) {
+    return "";
+  }
+
+  if (
+    (trimmed.startsWith('"') && trimmed.endsWith('"')) ||
+    (trimmed.startsWith("'") && trimmed.endsWith("'"))
+  ) {
+    return trimmed.slice(1, -1);
+  }
+
+  if (trimmed === "true") {
+    return true;
+  }
+
+  if (trimmed === "false") {
+    return false;
+  }
+
+  if (trimmed.startsWith("[") && trimmed.endsWith("]")) {
+    return trimmed
+      .slice(1, -1)
+      .split(",")
+      .map((item) => item.trim())
+      .filter(Boolean)
+      .map((item) => parseYamlScalar(item));
+  }
+
+  return trimmed;
+}
+
+export function parseFrontMatter(markdown) {
+  const normalized = markdown.replace(/\r\n/g, "\n");
+  if (!normalized.startsWith("---\n")) {
+    return {
+      data: {},
+      body: normalized.trim(),
+    };
+  }
+
+  const lines = normalized.split("\n");
+  const closingIndex = lines.findIndex((line, index) => index > 0 && line.trim() === "---");
+  if (closingIndex === -1) {
+    return {
+      data: {},
+      body: normalized.trim(),
+    };
+  }
+
+  const data = {};
+  let index = 1;
+
+  while (index < closingIndex) {
+    const line = lines[index];
+    if (!line.trim()) {
+      index += 1;
+      continue;
+    }
+
+    const keyMatch = line.match(/^([A-Za-z0-9_-]+):\s*(.*)$/);
+    if (!keyMatch) {
+      index += 1;
+      continue;
+    }
+
+    const key = keyMatch[1];
+    const rest = keyMatch[2];
+
+    if (!rest) {
+      const items = [];
+      index += 1;
+
+      while (index < closingIndex && /^\s*-\s+/.test(lines[index])) {
+        items.push(lines[index].replace(/^\s*-\s+/, ""));
+        index += 1;
+      }
+
+      data[key] = items;
+      continue;
+    }
+
+    data[key] = parseYamlScalar(rest);
+    index += 1;
+  }
+
+  return {
+    data,
+    body: lines.slice(closingIndex + 1).join("\n").trim(),
+  };
+}
+
 export function renderMarkdown(markdown) {
   if (!markdown || !markdown.trim()) {
     return "<p>No content yet.</p>";

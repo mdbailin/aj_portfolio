@@ -1,9 +1,0 @@
-{
-  "title": "Welcome",
-  "slug": "welcome",
-  "summary": "An opening note for the portfolio and blog.",
-  "tags": ["portfolio", "introduction"],
-  "author": "Aidin Jalilzadeh",
-  "publishedAt": "2026-03-23T00:00:00.000Z",
-  "body": "# Welcome\n\nThis portfolio is organized around a simple academic structure: a concise home page, a video archive, and a blog for longer-form writing.\n\n## Why this format\n\n- It keeps public-facing work easy to navigate.\n- It supports regular publishing without a custom backend.\n- It stays compatible with GitHub Pages.\n\nFuture posts can be published from the admin panel and stored directly in the repository."
-}

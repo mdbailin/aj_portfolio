@@ -8,7 +8,6 @@ Static academic portfolio designed for GitHub Pages.
 - `videos.html`: latest 10 uploads from a configured YouTube channel.
 - `blog.html`: public blog index.
 - `post.html`: individual post reader.
-- `admin.html`: GitHub-backed publishing panel for new blog posts.
 
 ## GitHub Pages deployment
 
@@ -42,28 +41,43 @@ youtube: {
 
 The videos page uses the public channel RSS feed and renders the latest 10 uploads.
 
-## Admin publishing setup
+## Blog authoring with CloudCannon
 
-The admin page works entirely from the browser, so it uses a GitHub personal access token instead of a custom backend.
+The public site no longer exposes an admin page. Blog authoring is intended to happen through CloudCannon, which connects to the GitHub repository and provides a proper editor/login flow for Aidin.
 
-Required token access:
+Relevant repo files:
 
-- Repository access to the portfolio repo
-- `Contents: Read and write`
+- `cloudcannon.config.yml`
+- `.cloudcannon/schemas/post.md`
+- `content/posts/*.md`
 
-Publishing flow:
+Recommended CloudCannon setup:
 
-1. Open `admin.html`.
-2. Log in with GitHub username, repo, branch, and token.
-3. Write the post in Markdown.
-4. Publish.
+1. Create a CloudCannon site connected to `mdbailin/aj_portfolio`.
+2. Invite Aidin as an editor in CloudCannon.
+3. Open the `Blog Posts` collection.
+4. Create or edit Markdown posts in the CloudCannon editor.
+5. Publish the changes back to GitHub.
 
-Each publish creates:
+Each blog post is a Markdown file with front matter in `content/posts/`, for example:
 
-- `content/posts/<slug>.json`
-- `content/posts/index.json`
+```md
+---
+title: Example Title
+summary: A short summary for blog listing pages.
+author: Aidin Jalilzadeh
+publishedAt: 2026-03-23T00:00:00.000Z
+tags:
+  - research
+  - notes
+---
 
-GitHub Pages may take a short time to reflect the new commit.
+# Example Title
+
+Post body here.
+```
+
+The public site reads those Markdown files directly from the GitHub repository and renders them on the blog pages.
 
 ## Local preview
 

@@ -1,0 +1,17 @@
+collections_config:
+  posts:
+    path: content/posts
+    name: Blog Posts
+    singular_name: Blog Post
+    icon: article
+    disable_add_folder: true
+    create: "[relative_base_path]/{title|slugify}.md"
+    _enabled_editors:
+      - content
+      - data
+    schemas:
+      default:
+        path: .cloudcannon/schemas/post.md
+        name: Blog Post
+        icon: article
+        description: Standard article with title, summary, publish date, author, and tags.
