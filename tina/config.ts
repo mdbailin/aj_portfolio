@@ -11,7 +11,7 @@ export default defineConfig({
   clientId: process.env.TINA_PUBLIC_CLIENT_ID || null,
   token: process.env.TINA_TOKEN || null,
   build: {
-    basePath: "/aj_portfolio",
+    basePath: "aj_portfolio",
     publicFolder: ".",
     outputFolder: "admin",
   },
