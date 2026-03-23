@@ -23,7 +23,7 @@ var config_default = defineConfig({
         path: "content/posts",
         format: "md",
         ui: {
-          router: ({ document }) => `/post.html?slug=${document._sys.filename}`,
+          router: ({ document }) => `/post.html?slug=${document.slug || document._sys.filename}`,
           filename: {
             readonly: true,
             slugify: (values) => {
@@ -45,7 +45,7 @@ var config_default = defineConfig({
             name: "slug",
             label: "Slug",
             required: true,
-            description: "Used in the public blog URL, for example post.html?slug=your-slug."
+            description: "Used in the public blog URL. Keep this aligned with the filename generated from the title."
           },
           {
             type: "string",
