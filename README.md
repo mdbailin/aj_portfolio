@@ -1,6 +1,6 @@
 # Aidin Jalilzadeh Portfolio
 
-Static academic portfolio designed for GitHub Pages.
+Static academic portfolio designed for GitHub Pages with TinaCMS-backed blog authoring.
 
 ## Included pages
 
@@ -8,6 +8,7 @@ Static academic portfolio designed for GitHub Pages.
 - `videos.html`: latest 10 uploads from a configured YouTube channel.
 - `blog.html`: public blog index.
 - `post.html`: individual post reader.
+- `admin/`: TinaCMS admin app generated during deployment when Tina secrets are configured.
 
 ## GitHub Pages deployment
 
@@ -41,23 +42,26 @@ youtube: {
 
 The videos page uses the public channel RSS feed and renders the latest 10 uploads.
 
-## Blog authoring with CloudCannon
+## Blog authoring with TinaCMS
 
-The public site no longer exposes an admin page. Blog authoring is intended to happen through CloudCannon, which connects to the GitHub repository and provides a proper editor/login flow for Aidin.
+The public site does not expose a custom in-browser editor. Blog authoring is intended to happen through TinaCMS, which provides a proper authenticated editing flow and writes Markdown content back to the GitHub repository.
 
 Relevant repo files:
 
-- `cloudcannon.config.yml`
-- `.cloudcannon/schemas/post.md`
+- `tina/config.ts`
 - `content/posts/*.md`
+- `.github/workflows/deploy-pages.yml`
 
-Recommended CloudCannon setup:
+Recommended Tina setup:
 
-1. Create a CloudCannon site connected to `mdbailin/aj_portfolio`.
-2. Invite Aidin as an editor in CloudCannon.
-3. Open the `Blog Posts` collection.
-4. Create or edit Markdown posts in the CloudCannon editor.
-5. Publish the changes back to GitHub.
+1. Create a TinaCloud project connected to `mdbailin/aj_portfolio`.
+2. Copy the TinaCloud `clientId` and `token`.
+3. Add GitHub repository secrets:
+   - `TINA_PUBLIC_CLIENT_ID`
+   - `TINA_TOKEN`
+4. In GitHub Pages, switch the source from `Deploy from a branch` to `GitHub Actions`.
+5. Push to `main` or rerun the `Deploy GitHub Pages` workflow.
+6. Open `/admin/` on the deployed site and sign in through Tina.
 
 Each blog post is a Markdown file with front matter in `content/posts/`, for example:
 
@@ -78,6 +82,22 @@ Post body here.
 ```
 
 The public site reads those Markdown files directly from the GitHub repository and renders them on the blog pages.
+
+## Local Tina development
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the local site together with Tina:
+
+```bash
+npm run dev
+```
+
+If TinaCloud credentials are not configured locally, the public site still works, but the Tina admin build and authenticated editing flow will not.
 
 ## Local preview
 

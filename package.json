@@ -1,0 +1,17 @@
+{
+  "name": "aj_portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Aidin Jalilzadeh portfolio site with TinaCMS-backed blog authoring.",
+  "scripts": {
+    "tinacms": "tinacms",
+    "dev": "tinacms dev -c \"python3 -m http.server 8000\"",
+    "build:tina": "tinacms build"
+  },
+  "dependencies": {
+    "@tinacms/cli": "^1.12.6",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
+    "tinacms": "^2.10.1"
+  }
+}
