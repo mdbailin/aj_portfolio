@@ -1,50 +1,21 @@
 import { loadPostBySlug, renderFullPost } from "./blog-data.js";
 import { initSite, setStatus } from "./site.js";
 
-let mathRendererPromise;
+const MAX_MATH_RENDER_WAIT_MS = 4000;
 
-function loadScript(src) {
-  return new Promise((resolve, reject) => {
-    const existing = document.querySelector(`script[src="${src}"]`);
-    if (existing) {
-      existing.addEventListener("load", resolve, { once: true });
-      existing.addEventListener("error", reject, { once: true });
-      if (existing.dataset.loaded === "true") {
-        resolve();
-      }
-      return;
-    }
-
-    const script = document.createElement("script");
-    script.src = src;
-    script.defer = true;
-    script.addEventListener(
-      "load",
-      () => {
-        script.dataset.loaded = "true";
-        resolve();
-      },
-      { once: true },
-    );
-    script.addEventListener("error", reject, { once: true });
-    document.head.append(script);
-  });
-}
-
-function ensureMathRenderer() {
-  if (!mathRendererPromise) {
-    mathRendererPromise = loadScript("https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js")
-      .then(() => loadScript("https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"));
-  }
-
-  return mathRendererPromise;
+function wait(ms) {
+  return new Promise((resolve) => window.setTimeout(resolve, ms));
 }
 
 async function renderMath(container) {
-  await ensureMathRenderer();
+  const deadline = Date.now() + MAX_MATH_RENDER_WAIT_MS;
+  while (typeof window.renderMathInElement !== "function" && Date.now() < deadline) {
+    await wait(50);
+  }
 
   if (typeof window.renderMathInElement !== "function") {
-    throw new Error("Math rendering library did not load.");
+    console.warn("KaTeX auto-render did not load; leaving math as plain text.");
+    return;
   }
 
   window.renderMathInElement(container, {
