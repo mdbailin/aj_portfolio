@@ -8,4 +8,4 @@ publishedAt: 2026-03-23T00:00:00.000Z
 
 Here are some math equations: $x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$
 
-$$ e^{i\pi} + 1 = 0 $$
+$$ e=mc²$$
