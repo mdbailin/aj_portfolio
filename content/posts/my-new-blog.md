@@ -1,5 +1,5 @@
 ---
-title: My new blog
+title: My New Title
 slug: new-blog math
 summary: A new blog entry
 author: Aidin Jalilzadeh
