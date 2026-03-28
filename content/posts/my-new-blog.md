@@ -72,7 +72,7 @@ For example, IB-style mathematics is often comfortable asking students not only 
 
 $$P(t) = P\_{0} e^{kt}$$
 
-and then discuss what the parameter ${a\_k}$ represents, whether the model is realistic over a long period, and what assumptions are built into it.
+and then discuss what the parameter ${k}$ represents, whether the model is realistic over a long period, and what assumptions are built into it.
 
 That is very IB. The mathematics is not separated from interpretation.
 
