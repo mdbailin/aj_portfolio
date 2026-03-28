@@ -2,7 +2,7 @@
   "name": "aj_portfolio",
   "private": true,
   "version": "1.0.0",
-  "description": "Aidin Jalilzadeh portfolio site with TinaCMS-backed blog authoring.",
+  "description": "Dr. Aidin Jalilzadeh portfolio site with TinaCMS-backed blog authoring.",
   "scripts": {
     "tinacms": "tinacms",
     "dev": "tinacms dev -c \"python3 -m http.server 8000\"",

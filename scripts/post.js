@@ -44,7 +44,7 @@ async function initPostPage() {
 
   try {
     const post = await loadPostBySlug(slug);
-    document.title = `${post.title} | Aidin Jalilzadeh`;
+    document.title = `${post.title} | Dr. Aidin Jalilzadeh`;
     container.innerHTML = renderFullPost(post);
     await renderMath(container);
   } catch (error) {

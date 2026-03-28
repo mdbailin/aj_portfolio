@@ -1,17 +1,17 @@
 const SITE_CONFIG = {
   site: {
-    title: "Aidin Jalilzadeh",
+    title: "Dr. Aidin Jalilzadeh",
     subtitle: "",
     description: "Research, writing, video work, and public scholarship.",
   },
   profile: {
-    name: "Aidin Jalilzadeh",
-    role: "Research, writing, and public-facing work.",
+    name: "Dr. Aidin Jalilzadeh",
+    role: "A Mathematical Wonderland",
     summary:
-      "Welcome to a space for writing, ideas, and ongoing work across research, teaching, and public scholarship.",
+      "A Mathematical Wonderland! Welcome to a space for writing, ideas, and ongoing work across research, teaching, and public scholarship.",
   },
   github: {
-    owner: "mdbailin",
+    owner: "aidinjalilzadeh-coder",
     repo: "aj_portfolio",
     branch: "main",
     contentDir: "content/posts",

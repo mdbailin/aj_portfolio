@@ -2,7 +2,7 @@
 title: My New Title
 slug: new-blog math
 summary: A new blog entry
-author: Aidin Jalilzadeh
+author: Dr. Aidin Jalilzadeh
 publishedAt: 2026-03-23T00:00:00.000Z
 ---
 

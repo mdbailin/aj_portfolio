@@ -1,4 +1,4 @@
-# Aidin Jalilzadeh Portfolio
+# Dr. Aidin Jalilzadeh Portfolio
 
 Static academic portfolio designed for GitHub Pages with TinaCMS-backed blog authoring.
 
@@ -12,7 +12,7 @@ Static academic portfolio designed for GitHub Pages with TinaCMS-backed blog aut
 
 ## GitHub Pages deployment
 
-1. Create or use the target repo under the `mdbailin` account.
+1. Create or use the target repo under the `aidinjalilzadeh-coder` account.
 2. Push these files to the repository.
 3. In GitHub, open `Settings > Pages`.
 4. Set the source to `Deploy from a branch`.
@@ -22,7 +22,7 @@ If the repo name changes, update `scripts/config.js`:
 
 ```js
 github: {
-  owner: "mdbailin",
+  owner: "aidinjalilzadeh-coder",
   repo: "aj_portfolio",
   branch: "main",
   contentDir: "content/posts",
@@ -54,7 +54,7 @@ Relevant repo files:
 
 Recommended Tina setup:
 
-1. Create a TinaCloud project connected to `mdbailin/aj_portfolio`.
+1. Create a TinaCloud project connected to `aidinjalilzadeh-coder/aj_portfolio`.
 2. Copy the TinaCloud `clientId` and `token`.
 3. Add GitHub repository secrets:
    - `TINA_PUBLIC_CLIENT_ID`
@@ -69,7 +69,7 @@ Each blog post is a Markdown file with front matter in `content/posts/`, for exa
 ---
 title: Example Title
 summary: A short summary for blog listing pages.
-author: Aidin Jalilzadeh
+author: Dr. Aidin Jalilzadeh
 publishedAt: 2026-03-23T00:00:00.000Z
 tags:
   - research
