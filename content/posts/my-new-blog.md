@@ -10,9 +10,9 @@ If you are trying to choose between A-level Math, AP Math, and IB Math, the conf
 
 At first glance, they may seem similar. Students study algebra, functions, calculus, statistics, and problem solving in all three systems. But the experience of learning them can feel very different. One course may push for deep procedural fluency, another may emphasize college-style unit exams, and another may connect mathematics to modeling, interpretation, and written communication.
 
-The biggest difference is not just \*what\* students learn. It is \*how\* they are expected to think.
+The biggest difference is not just *what* students learn. It is *how* they are expected to think.
 
-\## The simplest way to think about it
+## The simplest way to think about it
 
 A-level Math is usually the most focused and traditional in style. It tends to reward strong algebraic technique, careful working, and comfort with formal exam questions.
 
@@ -20,7 +20,7 @@ AP Math is the most U.S. college-aligned in structure. It is designed around sta
 
 IB Math is the most curriculum-driven and philosophy-driven. It is designed not only to teach math content, but also to develop a particular kind of mathematical thinker. Depending on the course, that may mean emphasis on proof and abstraction or on real-world modeling and interpretation.
 
-\## A-level Math: depth through a traditional academic route
+## A-level Math: depth through a traditional academic route
 
 A-level Math is common in the UK and in many international schools following a British-style curriculum. Students usually specialize more than they would in a broad diploma system, so mathematics is taken as a serious subject rather than as one part of a wide general package.
 
@@ -32,7 +32,7 @@ The strength of A-level Math is that it can build very solid mathematical techni
 
 The tradeoff is that it can feel narrower. It is often less interested in reflective writing, less interested in extended investigations, and less interested in interdisciplinary connections than IB. It is also not broken into separate branded courses in the same way AP is. It is more like committing to a rigorous subject pathway.
 
-\## AP Math: college-style courses with clear boundaries
+## AP Math: college-style courses with clear boundaries
 
 AP Math is a little different because it is not one course. When people say “AP Math,” they usually mean one or more of the following: AP Calculus AB, AP Calculus BC, or AP Statistics. Each one is its own course with its own exam.
 
@@ -56,7 +56,7 @@ The main strength of AP Math is clarity. Each course has a defined identity. If 
 
 The downside is that AP can sometimes feel fragmented. It does not always create the same unified mathematical identity that A-level or IB can create. Also, because AP is course-specific, the overall experience depends a lot on which AP math course a student actually takes.
 
-\## IB Math: one subject, different philosophies
+## IB Math: one subject, different philosophies
 
 IB Math stands apart because it is not just about content coverage. It is about the kind of mathematical thinking the course is trying to develop.
 
@@ -69,7 +69,7 @@ A student in a more analysis-focused route may spend more time with formal funct
 For example, IB-style mathematics is often comfortable asking students not only to solve an equation, but also to explain what the result means in context. A student might model population growth with an exponential function such as
 
 $$
-P(t) = P\_0 e^{kt}
+P(t) = P_0 e^{kt}
 $$
 
 and then discuss what the parameter ${k}$ represents, whether the model is realistic over a long period, and what assumptions are built into it.
@@ -80,7 +80,7 @@ Another major feature of IB Math is the internal assessment. Students usually co
 
 This makes IB Math feel broader and sometimes more demanding in a different sense. It is not always the hardest in pure symbolic manipulation, depending on the course and level, but it often asks students to be more versatile. They need to calculate, interpret, communicate, and reflect.
 
-\## Which one is hardest?
+## Which one is hardest?
 
 There is no single honest answer because “hardest” depends on the student.
 
@@ -90,7 +90,7 @@ Difficulty also depends on the exact course. AP Calculus BC is not the same expe
 
 So the better question is not “Which is hardest?” but “Which kind of difficulty suits the student best?”
 
-\## Which one prepares students best?
+## Which one prepares students best?
 
 Again, it depends on the next step.
 
@@ -98,7 +98,7 @@ For students heading into mathematically intensive university programs, A-level 
 
 For students who want flexibility, AP is often attractive because they can choose specific subjects. For students who want a coherent diploma program with mathematics embedded in a bigger academic framework, IB makes more sense. For students who want specialization and traditional academic rigor, A-level is often the strongest fit.
 
-\## Final thoughts
+## Final thoughts
 
 A-level Math, AP Math, and IB Math are not just three versions of the same course. They reflect three different educational philosophies.
 
