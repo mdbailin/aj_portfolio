@@ -70,7 +70,7 @@ A student in a more analysis-focused route may spend more time with formal funct
 
 For example, IB-style mathematics is often comfortable asking students not only to solve an equation, but also to explain what the result means in context. A student might model population growth with an exponential function such as
 
-$$P(t) = P\\\_{0} e^{kt}$$
+$$P(t) = P\\\_0 e^{kt}$$
 
 and then discuss what the parameter ${a\\\_k}$ represents, whether the model is realistic over a long period, and what assumptions are built into it.
 
