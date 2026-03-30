@@ -2,7 +2,7 @@ const SITE_CONFIG = {
   site: {
     title: "Dr. Aidin Jalilzadeh",
     subtitle: "",
-    description: "Research, writing, video work, and public scholarship.",
+    description: "Research, writing, video work, and public scholarship. Math education insights, teaching strategies, and mathematical thinking. A PhD mathematician's blog on making math engaging, accessible, and beautiful.",
   },
   profile: {
     name: "Dr. Aidin Jalilzadeh",
