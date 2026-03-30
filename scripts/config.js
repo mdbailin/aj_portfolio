@@ -1,6 +1,6 @@
 const SITE_CONFIG = {
   site: {
-    title: "Dr. Aidin Jalilzadeh",
+    title: "A Mathematical Wonderland | Dr. Aidin Jalilzadeh | Learning Math",
     subtitle: "",
     description: "Wonderful Maths, research, writing, video work, and public scholarship. Math education insights, teaching strategies, and mathematical thinking. A PhD mathematician's blog on making math engaging, accessible, and beautiful.",
   },
