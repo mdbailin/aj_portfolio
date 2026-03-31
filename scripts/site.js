@@ -56,7 +56,7 @@ export function initSite(activePage) {
     header.className = "site-header";
     header.innerHTML = `
       <a class="site-mark" href="index.html" aria-label="Go to the home page">
-        <span class="site-mark-title">${SITE_CONFIG.site.title}</span>
+        <span class="site-mark-title">${SITE_CONFIG.site.headerTitle}</span>
         ${SITE_CONFIG.site.subtitle ? `<span class="site-mark-subtitle">${SITE_CONFIG.site.subtitle}</span>` : ""}
       </a>
       <nav class="site-nav" aria-label="Primary">
@@ -70,7 +70,7 @@ export function initSite(activePage) {
   if (footer) {
     footer.className = "site-footer";
     footer.innerHTML = `
-      <p>${SITE_CONFIG.site.title}.</p>
+      <p>${SITE_CONFIG.site.headerTitle}.</p>
       <p><a class="footer-link" href="resume.pdf" download>Resume PDF</a></p>
     `;
   }
