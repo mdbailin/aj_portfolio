@@ -1,15 +1,15 @@
 const SITE_CONFIG = {
   site: {
-    title: "A Mathematical Wonderland | Dr. Aidin Jalilzadeh | Learning Math",
+    title: "Unlocking the language of patterns | Dr. Aidin Jalilzadeh",
     headerTitle: "Mathematical Wonderland",
     subtitle: "",
-    description: "Math education insights, teaching strategies, and mathematical thinking from Dr. Aidin Jalilzadeh (aka Mr. AJ). A blog for students, teachers, and math enthusiasts.",
+    description: "Making complex math simple, clear, and exciting. Math education insights, teaching strategies, and clear thinking from a PhD mathematician.",
   },
   profile: {
     name: "Dr. Aidin Jalilzadeh",
-    role: "aka Mr. AJ",
+    role: "Unlocking the language of patterns",
     summary:
-      "A Mathematical Wonderland! Welcome to a space for writing, ideas, and ongoing work across research, teaching, and public scholarship.",
+      "Making complex math simple, clear, and exciting for curious minds. A space for students, teachers, and lifelong learners to explore mathematics with insight and joy.",
   },
   github: {
     owner: "aidinjalilzadeh-coder",
