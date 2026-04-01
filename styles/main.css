@@ -476,6 +476,14 @@ textarea {
   color: var(--accent);
   font-weight: 600;
 }
+.contact-section {
+  padding: 4rem 8%;
+  text-align: center;
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  margin: 2rem auto;
+  max-width: 800px;
+}
 
 /* ============================================
    RESPONSIVE MEDIA QUERIES
