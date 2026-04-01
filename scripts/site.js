@@ -2,7 +2,7 @@ import SITE_CONFIG from "./config.js";
 
 function navLink(href, label, activePage) {
   const activeClass = activePage === href ? "is-active" : "";
-  return `<a class="${activeClass}" href="${href}">${label}</a>`;
+  return `<li><a class="${activeClass}" href="${href}">${label}</a></li>`;
 }
 
 export function formatDate(dateValue) {
@@ -46,6 +46,24 @@ export function bindProfileContent() {
   });
 }
 
+function initMobileMenu() {
+  const menuIcon = document.getElementById("menu-icon");
+  const navLinks = document.querySelector(".nav-links");
+  
+  if (menuIcon && navLinks) {
+    menuIcon.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+    
+    // Close menu when a link is clicked
+    navLinks.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+      });
+    });
+  }
+}
+
 export function initSite(activePage) {
   document.title = activePage === "index.html" ? SITE_CONFIG.site.title : `${document.title}`;
 
@@ -53,24 +71,25 @@ export function initSite(activePage) {
   const footer = document.getElementById("site-footer");
 
   if (header) {
-    header.className = "site-header";
+    header.className = "header";
     
-    // Only show the site-mark block if headerTitle has content
-    const siteMark = SITE_CONFIG.site.headerTitle ? `
-      <a class="site-mark" href="index.html" aria-label="Go to the home page">
-        <span class="site-mark-title">${SITE_CONFIG.site.headerTitle}</span>
-        ${SITE_CONFIG.site.subtitle ? `<span class="site-mark-subtitle">${SITE_CONFIG.site.subtitle}</span>` : ""}
-      </a>
-    ` : "";
+    // Logo: show headerTitle if it exists, otherwise empty
+    const logoHtml = SITE_CONFIG.site.headerTitle ? 
+      `<a class="logo" href="index.html"><span>${SITE_CONFIG.site.headerTitle}</span></a>` : "";
     
     header.innerHTML = `
-      ${siteMark}
-      <nav class="site-nav" aria-label="Primary">
+      ${logoHtml}
+      <ul class="nav-links">
         ${navLink("index.html", "Home", activePage)}
-        ${navLink("videos.html", "Videos", activePage)}
         ${navLink("blog.html", "Blog", activePage)}
-      </nav>
+        ${navLink("videos.html", "Videos", activePage)}
+      </ul>
+      <a class="visit-btn" href="resume.pdf" download>Resume</a>
+      <i class="fa-solid fa-bars" id="menu-icon"></i>
     `;
+    
+    // Initialize mobile menu after header is added to DOM
+    initMobileMenu();
   }
 
   if (footer) {
