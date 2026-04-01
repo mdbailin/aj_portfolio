@@ -5,6 +5,11 @@ function navLink(href, label, activePage) {
   return `<li><a class="${activeClass}" href="${href}">${label}</a></li>`;
 }
 
+function scrollLink(targetId, label, activePage) {
+  // For scroll links (like About and Contact on homepage)
+  return `<li><a href="#${targetId}" data-scroll="${targetId}">${label}</a></li>`;
+}
+
 export function formatDate(dateValue) {
   return new Intl.DateTimeFormat("en-US", {
     year: "numeric",
@@ -64,6 +69,21 @@ function initMobileMenu() {
   }
 }
 
+function initScrollLinks() {
+  // Handle scroll links (About, Contact) on homepage
+  const scrollLinks = document.querySelectorAll('[data-scroll]');
+  scrollLinks.forEach(link => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const targetId = link.getAttribute("data-scroll");
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  });
+}
+
 export function initSite(activePage) {
   document.title = activePage === "index.html" ? SITE_CONFIG.site.title : `${document.title}`;
 
@@ -73,29 +93,49 @@ export function initSite(activePage) {
   if (header) {
     header.className = "header";
     
-    // Logo: show headerTitle if it exists, otherwise empty
-    const logoHtml = SITE_CONFIG.site.headerTitle ? 
-      `<a class="logo" href="index.html"><span>${SITE_CONFIG.site.headerTitle}</span></a>` : "";
+    // Different nav structure based on current page
+    let navLinksHtml = "";
+    
+    if (activePage === "index.html") {
+      // On homepage: About and Contact scroll to sections
+      navLinksHtml = `
+        <li><a href="#about" data-scroll="about">About</a></li>
+        <li><a href="blog.html">Articles</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="#contact" data-scroll="contact">Contact</a></li>
+      `;
+    } else {
+      // On other pages: all links go to pages
+      navLinksHtml = `
+        <li><a href="index.html">About</a></li>
+        <li><a href="blog.html">Articles</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      `;
+    }
     
     header.innerHTML = `
-      ${logoHtml}
+      <a class="logo" href="index.html">Aidin Jalilzadeh</a>
       <ul class="nav-links">
-        ${navLink("index.html", "Home", activePage)}
-        ${navLink("blog.html", "Blog", activePage)}
-        ${navLink("videos.html", "Videos", activePage)}
+        ${navLinksHtml}
       </ul>
       <a class="visit-btn" href="resume.pdf" download>Resume</a>
       <i class="fa-solid fa-bars" id="menu-icon"></i>
     `;
     
-    // Initialize mobile menu after header is added to DOM
+    // Initialize mobile menu
     initMobileMenu();
+    
+    // Initialize scroll links (only works on homepage)
+    if (activePage === "index.html") {
+      initScrollLinks();
+    }
   }
 
   if (footer) {
     footer.className = "site-footer";
     footer.innerHTML = `
-      <p>${SITE_CONFIG.site.headerTitle || "Dr. Aidin Jalilzadeh"}</p>
+      <p>Aidin Jalilzadeh</p>
       <p><a class="footer-link" href="resume.pdf" download>Resume PDF</a></p>
     `;
   }
