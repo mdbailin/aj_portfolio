@@ -37,6 +37,7 @@ body {
   background-color: var(--bg);
   background-size: auto, 36px 36px, 36px 36px, auto;
   line-height: 1.65;
+  padding-top: 80px; /* Prevents content from being hidden under fixed navbar */
 }
 
 img {
@@ -59,68 +60,9 @@ textarea {
   min-height: 100vh;
 }
 
-.site-header,
-.site-footer,
 .page {
   width: min(calc(100% - 2rem), var(--max-width));
   margin: 0 auto;
-}
-
-.site-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1.5rem 0;
-}
-
-.site-mark {
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
-}
-
-.site-mark h1,
-.site-mark p,
-.page h1,
-.page h2,
-.page h3,
-.page h4 {
-  margin: 0;
-}
-
-.site-mark-title {
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(1.85rem, 3vw, 2.4rem);
-  font-weight: 600;
-  letter-spacing: 0.01em;
-}
-
-.site-mark-subtitle {
-  color: var(--muted);
-  font-size: 0.95rem;
-}
-
-.site-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.site-nav a {
-  border: 1px solid transparent;
-  border-radius: 999px;
-  padding: 0.65rem 1rem;
-  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
-}
-
-.site-nav a:hover,
-.site-nav a.is-active {
-  background: rgba(255, 255, 255, 0.78);
-  border-color: var(--line);
-}
-
-.page {
   padding: 1rem 0 4rem;
 }
 
@@ -535,6 +477,10 @@ textarea {
   font-weight: 600;
 }
 
+/* ============================================
+   RESPONSIVE MEDIA QUERIES
+   ============================================ */
+
 @media (max-width: 980px) {
   .hero,
   .grid-two,
@@ -554,7 +500,6 @@ textarea {
     max-width: 360px;
   }
 
-  .site-header,
   .site-footer {
     flex-direction: column;
     align-items: flex-start;
@@ -562,8 +507,6 @@ textarea {
 }
 
 @media (max-width: 640px) {
-  .site-header,
-  .site-footer,
   .page {
     width: min(calc(100% - 1.25rem), var(--max-width));
   }
@@ -573,15 +516,6 @@ textarea {
   .section-heading h2,
   .post-header h1 {
     font-size: clamp(2.6rem, 15vw, 3.6rem);
-  }
-
-  .site-nav {
-    width: 100%;
-  }
-
-  .site-nav a {
-    flex: 1 1 calc(50% - 0.5rem);
-    text-align: center;
   }
 
   .post-view {
@@ -695,7 +629,7 @@ header.header {
   transform: scale(1.1);
 }
 
-/* Mobile Responsive */
+/* Mobile Responsive for Navbar */
 @media (max-width: 768px) {
   header.header {
     gap: 1rem;
