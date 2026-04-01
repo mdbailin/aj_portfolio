@@ -1,7 +1,7 @@
 const SITE_CONFIG = {
   site: {
     title: "Unlocking the language of patterns | Dr. Aidin Jalilzadeh",
-    headerTitle: "Mathematical Wonderland",
+    headerTitle: "",
     subtitle: "",
     description: "Making complex math simple, clear, and exciting. Math education insights, teaching strategies, and clear thinking from a PhD mathematician.",
   },
