@@ -3,11 +3,11 @@ const SITE_CONFIG = {
     title: "A Mathematical Wonderland | Dr. Aidin Jalilzadeh | Learning Math",
     headerTitle: "Mathematical Wonderland",
     subtitle: "",
-    description: "Wonderful Maths, research, writing, video work, and public scholarship. Math education insights, teaching strategies, and mathematical thinking. A PhD mathematician's blog on making math engaging, accessible, and beautiful.",
+    description: "Math education insights, teaching strategies, and mathematical thinking from Dr. Aidin Jalilzadeh (aka Mr. AJ). A blog for students, teachers, and math enthusiasts.",
   },
   profile: {
     name: "Dr. Aidin Jalilzadeh",
-    role: "a.k.a MR AJ",
+    role: "aka Mr. AJ",
     summary:
       "A Mathematical Wonderland! Welcome to a space for writing, ideas, and ongoing work across research, teaching, and public scholarship.",
   },
