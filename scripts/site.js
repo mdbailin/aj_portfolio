@@ -54,11 +54,17 @@ export function initSite(activePage) {
 
   if (header) {
     header.className = "site-header";
-    header.innerHTML = `
+    
+    // Only show the site-mark block if headerTitle has content
+    const siteMark = SITE_CONFIG.site.headerTitle ? `
       <a class="site-mark" href="index.html" aria-label="Go to the home page">
         <span class="site-mark-title">${SITE_CONFIG.site.headerTitle}</span>
         ${SITE_CONFIG.site.subtitle ? `<span class="site-mark-subtitle">${SITE_CONFIG.site.subtitle}</span>` : ""}
       </a>
+    ` : "";
+    
+    header.innerHTML = `
+      ${siteMark}
       <nav class="site-nav" aria-label="Primary">
         ${navLink("index.html", "Home", activePage)}
         ${navLink("videos.html", "Videos", activePage)}
@@ -70,7 +76,7 @@ export function initSite(activePage) {
   if (footer) {
     footer.className = "site-footer";
     footer.innerHTML = `
-      <p>${SITE_CONFIG.site.headerTitle}.</p>
+      <p>${SITE_CONFIG.site.headerTitle || "Dr. Aidin Jalilzadeh"}</p>
       <p><a class="footer-link" href="resume.pdf" download>Resume PDF</a></p>
     `;
   }
