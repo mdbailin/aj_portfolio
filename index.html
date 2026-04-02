@@ -17,90 +17,55 @@
     <div class="page-shell">
       <header id="site-header"></header>
       <main class="page page-home">
-        <!-- Hero Section -->
-        <section class="hero">
-          <div class="hero-copy">
-            <p class="eyebrow">Academic Portfolio</p>
-            <h1 data-profile-name>Dr. Aidin Jalilzadeh</h1>
-            <p class="hero-role" data-profile-role>Unlocking the language of patterns</p>
-            <p class="hero-summary" data-profile-summary>
-              Making complex math simple, clear, and exciting for curious minds. A space for students, teachers, and lifelong learners to explore mathematics with insight and joy.
-            </p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="resume.pdf" download>Download Resume</a>
-              <a class="button button-secondary" href="blog.html">Read the Blog</a>
-            </div>
-          </div>
-          <div class="hero-portrait">
-            <div class="portrait-frame">
-              <img src="headshot.png" alt="Portrait of Dr. Aidin Jalilzadeh" />
-            </div>
-          </div>
-        </section>
-
-        <!-- My Mission / What You'll Find -->
-        <section class="grid-two">
-          <article class="panel panel-accent">
-            <p class="eyebrow">My Mission</p>
-            <h2>Making complex math simple, clear, and exciting.</h2>
-            <p>
-              Every mathematical concept has a story. My goal is to translate the language of patterns into ideas that anyone with curiosity can grasp, enjoy, and apply.
-            </p>
-          </article>
-          <article class="panel">
-            <p class="eyebrow">What You'll Find Here</p>
-            <ul class="plain-list">
-              <li>Clear explanations of mathematical concepts, from algebra to advanced topics.</li>
-              <li>Teaching insights and strategies for educators and lifelong learners.</li>
-              <li>A blog where mathematics meets curiosity — no jargon, just insight.</li>
-              <li>Video content exploring mathematical ideas in visual, accessible ways.</li>
-            </ul>
-          </article>
-        </section>
-
-        <!-- Explore Section -->
-        <section class="section-heading">
-          <p class="eyebrow">Explore</p>
-          <h2>Everything you need, one step away.</h2>
-        </section>
-
-        <section class="card-grid">
-          <a class="feature-card" href="blog.html">
-            <span class="feature-index">01</span>
-            <h3>Blog</h3>
-            <p>Essays, reflections, and clear explanations — making the language of patterns accessible to all.</p>
-          </a>
-          <a class="feature-card" href="videos.html">
-            <span class="feature-index">02</span>
-            <h3>Videos</h3>
-            <p>Visual explorations of mathematical ideas, designed to spark curiosity and understanding.</p>
-          </a>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="about-section">
-          <div class="about-container">
-            <div class="about-image">
-              <img src="headshot.png" alt="Dr. Aidin Jalilzadeh" />
-            </div>
-            <div class="info-box">
-              <h3>Hi, I'm</h3>
+        <!-- Unified About Section (Left: Text + Buttons + Social | Right: Photo) -->
+        <section id="about" class="unified-about">
+          <div class="about-grid">
+            <!-- Left Column -->
+            <div class="about-content">
+              <p class="eyebrow">Academic Portfolio</p>
               <h1>Dr. Aidin Jalilzadeh</h1>
-              <span>Unlocking the language of patterns</span>
-              <p class="about-text">
-                I'm a mathematician, educator, and lifelong learner. With a PhD in Applied Mathematics and years of teaching experience in international schools, I'm on a mission to make complex math simple, clear, and exciting for students, teachers, and curious minds alike.
+              <p class="motto">Unlocking the language of patterns</p>
+              <p class="summary">
+                Making complex math simple, clear, and exciting for curious minds. A space for students, teachers, and lifelong learners to explore mathematics with insight and joy.
               </p>
-              <div class="btn-group">
+              <div class="button-group">
                 <a href="#contact" class="btn btn-primary">Contact Me</a>
                 <a href="resume.pdf" download class="btn btn-secondary">Resume</a>
               </div>
-              <div class="socials">
-                <a href="https://twitter.com/yourhandle" target="_blank"><i class="fab fa-twitter"></i></a>
+              <div class="social-links">
+                <a href="https://www.youtube.com/@AJTeachesMath" target="_blank"><i class="fab fa-youtube"></i></a>
                 <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://github.com/aidinjalilzadeh-coder" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="mailto:aidin.jalilzadeh@example.com"><i class="fas fa-envelope"></i></a>
               </div>
             </div>
+
+            <!-- Right Column: Photo -->
+            <div class="about-photo">
+              <div class="photo-frame">
+                <img src="headshot.png" alt="Dr. Aidin Jalilzadeh" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Two Cards: My Mission + My Expertise -->
+        <section class="cards-grid">
+          <div class="card">
+            <p class="card-eyebrow">My Mission</p>
+            <h3>Making complex math simple, clear, and exciting.</h3>
+            <p>
+              Every mathematical concept has a story. My goal is to translate the language of patterns into ideas that anyone with curiosity can grasp, enjoy, and apply.
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="card-eyebrow">My Expertise</p>
+            <h3>Applied Mathematics · Education · Research</h3>
+            <ul class="expertise-list">
+              <li>PhD in Applied Mathematics</li>
+              <li>10+ years teaching experience</li>
+              <li>Mathematical modelling & research</li>
+              <li>Science communication & public scholarship</li>
+            </ul>
           </div>
         </section>
 
@@ -112,41 +77,25 @@
             <p class="contact-text">
               Have questions about math, teaching, or just want to say hello? I'd love to hear from you.
             </p>
-            
             <div class="contact-methods">
               <div class="contact-card">
                 <i class="fas fa-envelope"></i>
                 <h3>Email</h3>
                 <a href="mailto:aidin.jalilzadeh@example.com">aidin.jalilzadeh@example.com</a>
               </div>
-              
               <div class="contact-card">
-                <i class="fab fa-twitter"></i>
-                <h3>Twitter</h3>
-                <a href="https://twitter.com/yourhandle" target="_blank">@yourhandle</a>
+                <i class="fab fa-youtube"></i>
+                <h3>YouTube</h3>
+                <a href="https://www.youtube.com/@AJTeachesMath" target="_blank">@AJTeachesMath</a>
               </div>
-              
               <div class="contact-card">
                 <i class="fab fa-linkedin-in"></i>
                 <h3>LinkedIn</h3>
                 <a href="https://linkedin.com/in/yourprofile" target="_blank">Connect with me</a>
               </div>
-              
-              <div class="contact-card">
-                <i class="fab fa-github"></i>
-                <h3>GitHub</h3>
-                <a href="https://github.com/aidinjalilzadeh-coder" target="_blank">View projects</a>
-              </div>
             </div>
           </div>
         </section>
-
-        <!-- Recent Writing Section -->
-        <section class="section-heading">
-          <p class="eyebrow">Recent Writing</p>
-          <h2>Latest from the blog</h2>
-        </section>
-        <section id="featured-posts" class="post-grid"></section>
       </main>
       <footer id="site-footer"></footer>
     </div>
