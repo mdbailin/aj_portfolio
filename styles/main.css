@@ -356,7 +356,7 @@ header.header {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 2.5rem;
   background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(8px);
   color: white;
