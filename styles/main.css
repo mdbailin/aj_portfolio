@@ -378,7 +378,7 @@ header.header {
 }
 
 .logo:hover {
-  transform: scale(1.05);
+  transform: scale(1.5);
 }
 
 .nav-links {
