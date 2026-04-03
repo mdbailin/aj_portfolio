@@ -171,7 +171,7 @@ textarea {
 
 .social-links a:hover {
   color: var(--accent);
-  transform: translateY(-3px);
+  transform: translateY(-3px) scale(1.1);
 }
 
 .about-photo {
