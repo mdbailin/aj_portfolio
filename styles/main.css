@@ -165,13 +165,13 @@ textarea {
 
 .social-links a {
   color: var(--muted);
-  font-size: 2rem;
+  font-size: 4rem;
   transition: all 0.2s ease;
 }
 
 .social-links a:hover {
   color: var(--accent);
-  transform: translateY(-3px) scale(1.1);
+  transform: translateY(-3px) scale(1.5);
 }
 
 .about-photo {
