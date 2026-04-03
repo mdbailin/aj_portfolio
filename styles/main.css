@@ -331,6 +331,7 @@ textarea {
   font-size: 1.3rem;
   margin: 0 0 0.5rem 0;
   color: var(--text);
+  background: linear-gradient(to right, #009dff, #ff00ff);
 }
 
 .contact-card a {
@@ -338,7 +339,7 @@ textarea {
   text-decoration: none;
   transition: color 0.2s ease;
   word-break: break-all;
-  background: linear-gradient(to right, #009dff, #ff00ff);
+  
 }
 
 .contact-card a:hover {
