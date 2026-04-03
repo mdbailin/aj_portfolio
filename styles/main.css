@@ -164,14 +164,14 @@ textarea {
 }
 
 .social-links a {
-  color: var(--muted);
-  font-size: 2.1rem;
+  color: #2a2a2a;
+  font-size: 2.15rem;
   transition: all 0.2s ease;
 }
 
 .social-links a:hover {
-  color: var(--accent);
-  transform: translateY(-3px) scale(1.17);
+  color: #000000;
+  transform: translateY(-3px) scale(1.25);
 }
 
 .about-photo {
