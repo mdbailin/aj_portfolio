@@ -160,12 +160,12 @@ textarea {
 
 .social-links {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .social-links a {
   color: var(--muted);
-  font-size: 1.5rem;
+  font-size: 2rem;
   transition: all 0.2s ease;
 }
 
