@@ -6,7 +6,7 @@ function navLink(href, label, activePage) {
 }
 
 function scrollLink(targetId, label, activePage) {
-  // For scroll links (like About and Contact on homepage)
+  // For scroll links (like About, Experience, and Contact on homepage)
   return `<li><a href="#${targetId}" data-scroll="${targetId}">${label}</a></li>`;
 }
 
@@ -70,7 +70,7 @@ function initMobileMenu() {
 }
 
 function initScrollLinks() {
-  // Handle scroll links (About, Contact) on homepage
+  // Handle scroll links (About, Experience, Contact) on homepage
   const scrollLinks = document.querySelectorAll('[data-scroll]');
   scrollLinks.forEach(link => {
     link.addEventListener("click", (e) => {
@@ -97,9 +97,10 @@ export function initSite(activePage) {
     let navLinksHtml = "";
     
     if (activePage === "index.html") {
-      // On homepage: About and Contact scroll to sections
+      // On homepage: About, Experience, and Contact scroll to sections
       navLinksHtml = `
         <li><a href="#about" data-scroll="about">About</a></li>
+        <li><a href="#experience" data-scroll="experience">Experience</a></li>
         <li><a href="blog.html">Articles</a></li>
         <li><a href="videos.html">Videos</a></li>
         <li><a href="#contact" data-scroll="contact">Contact</a></li>
@@ -108,6 +109,7 @@ export function initSite(activePage) {
       // On other pages: all links go to pages
       navLinksHtml = `
         <li><a href="index.html">About</a></li>
+        <li><a href="index.html#experience">Experience</a></li>
         <li><a href="blog.html">Articles</a></li>
         <li><a href="videos.html">Videos</a></li>
         <li><a href="index.html#contact">Contact</a></li>
