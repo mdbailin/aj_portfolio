@@ -637,12 +637,12 @@ header.header {
 
 #experience {
   scroll-margin-top: 100px;
-  margin-top: 3rem;  /* Adds visible space above the Experience section */
+  margin-top: 50px;  /* Adds visible space above the Experience section */
 }
 
 #contact {
   scroll-margin-top: 100px;
-  margin-top: 3rem;
+  margin-top: 50px;
 }
 
 #about,
@@ -653,5 +653,5 @@ header.header {
 
 #experience,
 #contact {
-  margin-top: 3rem;
+  margin-top: 50px;
 }
