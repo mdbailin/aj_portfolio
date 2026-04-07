@@ -629,3 +629,29 @@ header.header {
     align-items: flex-start;
   }
 }
+
+
+/* ============================================
+   FIX FOR FIXED NAVBAR (SCROLL MARGIN)
+   ============================================ */
+
+#experience {
+  scroll-margin-top: 100px;
+  margin-top: 3rem;  /* Adds visible space above the Experience section */
+}
+
+#contact {
+  scroll-margin-top: 100px;
+  margin-top: 3rem;
+}
+
+#about,
+#experience,
+#contact {
+  scroll-margin-top: 100px;
+}
+
+#experience,
+#contact {
+  margin-top: 3rem;
+}
