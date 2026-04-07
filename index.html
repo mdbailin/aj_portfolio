@@ -12,12 +12,34 @@
     <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- Tiny inline override to guarantee Experience heading visibility -->
+    <style>
+      /* ensure .cards-grid section title is never hidden — works with your existing main.css */
+      #experience .section-title {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        margin-bottom: 1.5rem;
+      }
+      /* also ensure the cards grid structure matches your existing design */
+      .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem;
+        margin: 0;
+      }
+      @media (max-width: 768px) {
+        .cards-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="page-shell">
       <header id="site-header"></header>
       <main class="page page-home">
-        <!-- ================= ABOUT SECTION (UPDATED) ================= -->
+        <!-- ================= ABOUT SECTION ================= -->
         <section id="about" class="unified-about">
           <div class="about-grid">
             <!-- Left Column -->
@@ -25,7 +47,6 @@
               <p class="eyebrow">Academic Portfolio</p>
               <h1>Dr. Aidin Jalilzadeh</h1>
               <p class="motto">Unlocking the language of patterns</p>
-              <!-- MERGED SUMMARY + MISSION STATEMENT -->
               <p class="summary">
                 Making complex math simple, clear, and exciting for curious minds. A space for students, teachers, and lifelong learners to explore mathematics with insight and joy. Every mathematical concept has a story. My goal is to translate the language of patterns into ideas that anyone with curiosity can grasp, enjoy, and apply.
               </p>
@@ -47,34 +68,37 @@
           </div>
         </section>
 
-        <!-- ================= EXPERIENCE SECTION (NEW) ================= -->
-        <section id="experience" class="cards-grid">
-          <h2 class="section-title">Experience</h2>
-          <!-- Card 1: Replacing "My Mission" with "My Experience" -->
-          <div class="card">
-            <p class="card-eyebrow">My Experience</p>
-            <h3>Teaching · Research · Mentorship</h3>
-            <ul class="expertise-list">
-              <li>10+ years teaching mathematics (IGCSE, A-Level, Further Maths)</li>
-              <li>PhD in Applied Mathematics (University of Otago)</li>
-              <li>Postdoctoral Fellow in Mathematical Modelling</li>
-              <li>Higher Education Academy (AFHEA) & Lord Dearing Award Winner</li>
-            </ul>
-          </div>
-          <!-- Card 2: Your Expertise (Updated from the original second card) -->
-          <div class="card">
-            <p class="card-eyebrow">My Expertise</p>
-            <h3>Applied Mathematics · Education · Research</h3>
-            <ul class="expertise-list">
-              <li>PhD in Applied Mathematics</li>
-              <li>10+ years teaching experience</li>
-              <li>Mathematical modelling & research</li>
-              <li>Science communication & public scholarship</li>
-            </ul>
+        <!-- ================= EXPERIENCE SECTION ================= -->
+        <!-- Title "Experience" is now clearly visible and works with your main.css -->
+        <section id="experience">
+          <h2 class="section-title" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2rem; margin-bottom: 1.5rem;">Experience</h2>
+          <div class="cards-grid">
+            <!-- Card 1: My Experience -->
+            <div class="card">
+              <p class="card-eyebrow">My Experience</p>
+              <h3>Teaching · Research · Mentorship</h3>
+              <ul class="expertise-list">
+                <li>10+ years teaching mathematics (IGCSE, A-Level, Further Maths)</li>
+                <li>PhD in Applied Mathematics (University of Otago)</li>
+                <li>Postdoctoral Fellow in Mathematical Modelling</li>
+                <li>Higher Education Academy (AFHEA) & Lord Dearing Award Winner</li>
+              </ul>
+            </div>
+            <!-- Card 2: My Expertise -->
+            <div class="card">
+              <p class="card-eyebrow">My Expertise</p>
+              <h3>Applied Mathematics · Education · Research</h3>
+              <ul class="expertise-list">
+                <li>PhD in Applied Mathematics</li>
+                <li>10+ years teaching experience</li>
+                <li>Mathematical modelling & research</li>
+                <li>Science communication & public scholarship</li>
+              </ul>
+            </div>
           </div>
         </section>
 
-        <!-- ================= CONTACT SECTION (UNCHANGED) ================= -->
+        <!-- ================= CONTACT SECTION ================= -->
         <section id="contact" class="contact-section">
           <div class="contact-container">
             <p class="eyebrow">Get in Touch</p>
@@ -102,5 +126,16 @@
       <footer id="site-footer"></footer>
     </div>
     <script type="module" src="scripts/home.js"></script>
+    <!-- small runtime guard for heading visibility -->
+    <script>
+      (function() {
+        const expHeading = document.querySelector('#experience .section-title');
+        if (expHeading) {
+          expHeading.style.display = 'block';
+          expHeading.style.visibility = 'visible';
+          expHeading.style.opacity = '1';
+        }
+      })();
+    </script>
   </body>
 </html>
