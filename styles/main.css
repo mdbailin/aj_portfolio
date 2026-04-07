@@ -467,21 +467,21 @@ header.header {
 #about,
 #experience,
 #contact {
-  scroll-margin-top: 100px;
+  scroll-margin-top: 500px;
 }
 
 #about {
-  padding-top: 2rem;
+  padding-top: 5rem;
 }
 
 #experience {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 #contact {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 /* ============================================
