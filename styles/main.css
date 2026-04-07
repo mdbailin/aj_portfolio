@@ -73,7 +73,6 @@ textarea {
 header.header {
   position: fixed;
   top: 1rem;
-  margin-bottom: 3rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -86,11 +85,6 @@ header.header {
   padding: 0.5rem 1.5rem;
   border-radius: 3rem;
   z-index: 1000;
-  /*
-  width: auto;
-  max-width: 90vw;
-  transition: all 0.3s ease;
-  */
 }
 
 .logo {
@@ -125,7 +119,7 @@ header.header {
   content: '';
   width: 0;
   left: 0;
-  top:25px;
+  top: 25px;
   height: 5px;
   border-radius: 1rem;
   transition: 0.3s ease-in-out;
@@ -155,7 +149,7 @@ header.header {
 }
 
 .visit-btn:hover {
-  background: linear-gradient(to right,#ff00ff,#009dff);
+  background: linear-gradient(to right, #ff00ff, #009dff);
   transform: scale(1.03);
 }
 
@@ -171,14 +165,12 @@ header.header {
   transform: scale(1.1);
 }
 
-
 /* ============================================
    UNIFIED ABOUT SECTION
    ============================================ */
 
 .unified-about {
   padding: 2rem 0 1rem 0;
-  margin-bottom:4rem;
 }
 
 .about-grid {
@@ -303,14 +295,14 @@ header.header {
 }
 
 /* ============================================
-   TWO CARDS SECTION (My Mission + My Expertise)
+   TWO CARDS SECTION (My Experience + My Expertise)
    ============================================ */
 
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.5rem;
-  margin: 3rem 0 3rem 0;
+  margin: 0;
 }
 
 .card {
@@ -370,8 +362,6 @@ header.header {
 
 .contact-section {
   padding: 4rem 0;
-  margin-top: 2rem;
-  margin-bottom:3rem;
 }
 
 .contact-container {
@@ -439,7 +429,6 @@ header.header {
   font-size: 1.3rem;
   margin: 0 0 0.5rem 0;
   color: var(--text);
-  
 }
 
 .contact-card a {
@@ -447,13 +436,11 @@ header.header {
   text-decoration: none;
   transition: color 0.2s ease;
   word-break: break-all;
-  
 }
 
 .contact-card a:hover {
   color: var(--accent);
 }
-
 
 /* ============================================
    SITE FOOTER
@@ -471,6 +458,30 @@ header.header {
 .footer-link {
   color: var(--accent);
   font-weight: 600;
+}
+
+/* ============================================
+   SECTION SPACING & SCROLL FIXES
+   ============================================ */
+
+#about,
+#experience,
+#contact {
+  scroll-margin-top: 100px;
+}
+
+#about {
+  padding-top: 2rem;
+}
+
+#experience {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+#contact {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 /* ============================================
@@ -631,27 +642,4 @@ header.header {
     flex-direction: column;
     align-items: flex-start;
   }
-}
-
-
-/* ============================================
-   SECTION SPACING & SCROLL FIXES
-   ============================================ */
-
-#about,
-#experience,
-#contact {
-  scroll-margin-top: 200px;
-}
-
-#about {
-  padding-top: 5rem;      /* Pushes About section lower on page */
-}
-
-#experience {
-  margin-top: 5rem;       /* Generous space between About and Experience */
-}
-
-#contact {
-  margin-top: 5rem;       /* Generous space between Experience and Contact */
 }
