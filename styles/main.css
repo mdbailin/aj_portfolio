@@ -107,6 +107,7 @@ header.header {
 .nav-links {
   display: flex;
   gap: 2rem;
+  list-style: none;
 }
 
 .nav-links li a {
