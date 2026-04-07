@@ -632,26 +632,23 @@ header.header {
 
 
 /* ============================================
-   FIX FOR FIXED NAVBAR (SCROLL MARGIN)
+   SECTION SPACING & SCROLL FIXES
    ============================================ */
-
-#experience {
-  scroll-margin-top: 100px;
-  margin-top: 150px;  /* Adds visible space above the Experience section */
-}
-
-#contact {
-  scroll-margin-top: 100px;
-  margin-top: 150px;
-}
 
 #about,
 #experience,
 #contact {
-  scroll-margin-top: 100px;
+  scroll-margin-top: 200px;
 }
 
-#experience,
+#about {
+  padding-top: 5rem;      /* Pushes About section lower on page */
+}
+
+#experience {
+  margin-top: 5rem;       /* Generous space between About and Experience */
+}
+
 #contact {
-  margin-top: 150px;
+  margin-top: 5rem;       /* Generous space between Experience and Contact */
 }
