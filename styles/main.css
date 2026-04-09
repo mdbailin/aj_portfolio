@@ -175,9 +175,9 @@ section {
    UNIFIED ABOUT SECTION
    ============================================ */
 
-.unified-about {
+/*.unified-about {
   padding: 2rem 0 1rem 0;
-}
+}*/
 
 .about-grid {
   display: grid;
@@ -375,9 +375,9 @@ section {
    CONTACT SECTION
    ============================================ */
 
-.contact-section {
+/*.contact-section {
   padding: 4rem 0;
-}
+}*/
 
 .contact-container {
   background: var(--surface);
