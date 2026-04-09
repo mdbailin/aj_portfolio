@@ -101,7 +101,7 @@ export function initSite(activePage) {
       navLinksHtml = `
         <li><a href="#about" data-scroll="about">About</a></li>
         <li><a href="#experience" data-scroll="experience">Experience</a></li>
-        <li><a href="blog.html">Articles</a></li>
+        <li><a href="#articles" data-scroll="articles">Articles</a></li>
         <li><a href="videos.html">Videos</a></li>
         <li><a href="#contact" data-scroll="contact">Contact</a></li>
       `;
@@ -110,8 +110,8 @@ export function initSite(activePage) {
       navLinksHtml = `
         <li><a href="index.html">About</a></li>
         <li><a href="index.html#experience">Experience</a></li>
-        <li><a href="blog.html">Articles</a></li>
-        <li><a href="videos.html">Videos</a></li>
+        <li><a href="index.html">Articles</a></li>
+        <li><a href="index.html">Videos</a></li>
         <li><a href="index.html#contact">Contact</a></li>
       `;
     }
