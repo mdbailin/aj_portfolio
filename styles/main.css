@@ -297,7 +297,14 @@ header.header {
 /* ============================================
    TWO CARDS SECTION (My Experience + My Expertise)
    ============================================ */
+#experience .section-title {
+  text-align: center;
+}
 
+#experience .section-title::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
