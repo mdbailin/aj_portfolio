@@ -298,7 +298,8 @@ header.header {
    TWO CARDS SECTION (My Experience + My Expertise)
    ============================================ */
 #experience .section-title {
-  text-align: center;
+  text-align: center !important;
+  font-size: 3rem !important;
 }
 
 #experience .section-title::after {
