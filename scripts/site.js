@@ -110,7 +110,7 @@ export function initSite(activePage) {
       navLinksHtml = `
         <li><a href="index.html">About</a></li>
         <li><a href="index.html#experience">Experience</a></li>
-        <li><a href="index.html">Articles</a></li>
+        <li><a href="index.html#articles">Articles</a></li>
         <li><a href="index.html">Videos</a></li>
         <li><a href="index.html#contact">Contact</a></li>
       `;
