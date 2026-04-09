@@ -409,6 +409,133 @@ section {
 }
 
 /* ============================================
+   ARTICLES SECTION (THREE COLUMNS)
+   ============================================ */
+
+#articles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#articles .section-title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 500;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  margin-bottom: 3rem;
+}
+
+#articles .section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--accent);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.article-card {
+  background: var(--surface);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.2s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow);
+  border-color: var(--line-strong);
+}
+
+.article-icon {
+  margin-bottom: 1.5rem;
+}
+
+.article-icon i {
+  font-size: 3rem;
+  color: var(--accent);
+  transition: transform 0.3s ease;
+}
+
+.article-card:hover .article-icon i {
+  transform: scale(1.1);
+}
+
+.article-card h3 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.6rem;
+  margin: 0 0 1rem 0;
+  color: var(--text);
+}
+
+.article-description {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
+}
+
+.article-link {
+  display: inline-block;
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.article-link::after {
+  content: '→';
+  margin-left: 0.3rem;
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+.article-link:hover {
+  color: var(--text);
+}
+
+.article-link:hover::after {
+  transform: translateX(4px);
+}
+
+/* Responsive adjustments for articles */
+@media (max-width: 900px) {
+  .articles-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .articles-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .article-card {
+    padding: 1.5rem;
+  }
+  
+  #articles .section-title {
+    font-size: 2.2rem;
+  }
+}
+/* ============================================
    CONTACT SECTION
    ============================================ */
 
