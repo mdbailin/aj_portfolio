@@ -15,6 +15,7 @@
   --radius-lg: 28px;
   --radius-md: 18px;
   --radius-sm: 12px;
+  --navbar-height: 80px;
 }
 
 * {
@@ -23,6 +24,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
 
 body {
@@ -37,7 +39,6 @@ body {
   background-color: var(--bg);
   background-size: auto, 36px 36px, 36px 36px, auto;
   line-height: 1.65;
-  padding-top: 80px;
 }
 
 img {
@@ -58,12 +59,6 @@ textarea {
 
 .page-shell {
   min-height: 100vh;
-}
-
-.page {
-  width: min(calc(100% - 2rem), var(--max-width));
-  margin: 0 auto;
-  padding: 1rem 0 4rem;
 }
 
 /* ============================================
@@ -164,26 +159,51 @@ header.header {
 #menu-icon:hover {
   transform: scale(1.1);
 }
+
+/* ============================================
+   VIEWPORT-FILLING SECTIONS
+   ============================================ */
+
 section {
   min-height: 100vh;
-  padding: 8rem 12%;
   width: 100%;
   position: relative;
-
+  display: flex;
+  align-items: center;
+  scroll-snap-align: start;
+  padding: calc(var(--navbar-height) + 2rem) 12% 4rem;
 }
+
+/* Remove conflicting margins and scroll margins */
+#about,
+#experience,
+#contact {
+  scroll-margin-top: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: calc(var(--navbar-height) + 2rem);
+}
+
+/* Override the page container to allow full-width sections */
+.page {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  max-width: none;
+}
+
 /* ============================================
    UNIFIED ABOUT SECTION
    ============================================ */
-
-/*.unified-about {
-  padding: 2rem 0 1rem 0;
-}*/
 
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
   align-items: center;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
 }
 
 .about-content .eyebrow {
@@ -301,23 +321,40 @@ section {
 }
 
 /* ============================================
-   TWO CARDS SECTION (My Experience + My Expertise)
+   EXPERIENCE SECTION
    ============================================ */
+
+#experience {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 #experience .section-title {
   text-align: center;
   font-size: 3rem;
   font-weight: 500;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  margin-bottom: 2rem;
 }
 
 #experience .section-title::after {
-  left: 50%;
-  transform: translateX(-50%);
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--accent);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
 }
+
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.5rem;
-  margin: 0;
+  margin: 0 auto;
+  width: 100%;
+  max-width: var(--max-width);
 }
 
 .card {
@@ -375,9 +412,11 @@ section {
    CONTACT SECTION
    ============================================ */
 
-/*.contact-section {
-  padding: 4rem 0;
-}*/
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 .contact-container {
   background: var(--surface);
@@ -387,6 +426,9 @@ section {
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
   text-align: center;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  width: 100%;
 }
 
 .contact-container .eyebrow {
@@ -468,6 +510,8 @@ section {
   padding: 1rem 0 2.5rem;
   color: var(--muted);
   font-size: 0.92rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
 }
 
 .footer-link {
@@ -476,34 +520,14 @@ section {
 }
 
 /* ============================================
-   SECTION SPACING & SCROLL FIXES
-   ============================================ */
-
-#about,
-#experience,
-#contact {
-  scroll-margin-top: 500px;
-}
-
-#about {
-  padding-top: 5rem;
-}
-
-#experience {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-}
-
-#contact {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-}
-
-/* ============================================
    RESPONSIVE MEDIA QUERIES
    ============================================ */
 
 @media (max-width: 768px) {
+  section {
+    padding: calc(var(--navbar-height) + 1rem) 5% 2rem;
+  }
+
   .about-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -552,10 +576,6 @@ section {
 
   .contact-container {
     padding: 2rem 1rem;
-  }
-
-  .contact-section {
-    padding: 2rem 0;
   }
 
   header.header {
@@ -617,6 +637,7 @@ section {
   .site-footer {
     flex-direction: column;
     align-items: flex-start;
+    padding: 1rem 5% 2rem;
   }
 }
 
@@ -650,11 +671,16 @@ section {
   .card h3 {
     font-size: 1.3rem;
   }
+
+  #experience .section-title {
+    font-size: 2rem;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 980px) {
   .site-footer {
     flex-direction: column;
     align-items: flex-start;
+    padding-left: 5%;
   }
 }
