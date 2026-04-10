@@ -36,6 +36,12 @@ async function initBlogPage() {
       if (introSection) {
         introSection.textContent = `${sectionTitle} articles`;
       }
+      
+      // Update the description text
+      const descParagraph = document.querySelector('.page-intro p');
+      if (descParagraph) {
+        descParagraph.textContent = `Posts about ${sectionTitle.toLowerCase()}.`;
+      }
     }
     
     if (posts.length === 0) {
