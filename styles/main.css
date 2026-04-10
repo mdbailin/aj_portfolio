@@ -165,7 +165,7 @@ header.header {
    ============================================ */
 
 section {
-  min-height: 75vh;
+  min-height: 25vh;
   width: 100%;
   position: relative;
   display: flex;
