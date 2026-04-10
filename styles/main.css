@@ -171,7 +171,7 @@ section {
   display: flex;
   align-items: center;
   scroll-snap-align: start;
-  padding: calc(var(--navbar-height) + 2rem) 12% 4rem;
+  padding: calc(var(--navbar-height) + 1rem) 12% 4rem;
 }
 
 /* Remove conflicting margins and scroll margins */
@@ -181,7 +181,7 @@ section {
   scroll-margin-top: 0;
   margin-top: 0;
   margin-bottom: 0;
-  padding-top: calc(var(--navbar-height) + 2rem);
+  padding-top: calc(var(--navbar-height) + 1rem);
 }
 
 /* Override the page container to allow full-width sections */
