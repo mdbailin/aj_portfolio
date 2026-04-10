@@ -260,7 +260,7 @@ section {
 }
 
 .btn-primary {
-  background: var(--accent);
+  background: transparent;
   border: 2px solid var(--accent);
   color: white;
 }
