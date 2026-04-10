@@ -262,12 +262,12 @@ section {
 .btn-primary {
   background: transparent;
   border: 2px solid var(--accent);
-  color: white;
+  color: var(--accent);
 }
 
 .btn-primary:hover {
-  background: transparent;
-  color: var(--accent);
+  background: var(--accent);
+  color: white;
   transform: translateY(-2px);
 }
 
