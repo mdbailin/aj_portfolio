@@ -768,6 +768,13 @@ section {
   max-width: 600px;
   margin: 2rem auto;
 }
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+.is-hidden {
+  display: none !important;
+}
 
 /* Page intro styling */
 .page-intro {
