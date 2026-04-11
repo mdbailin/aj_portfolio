@@ -10,6 +10,7 @@ async function initBlogPage() {
   // Get tag filter from URL if present
   const params = new URLSearchParams(window.location.search);
   const filterTag = params.get("tag");
+  console.log("Filter tag from URL:", filterTag);
 
   try {
     let posts = await loadPostIndex();
