@@ -24,7 +24,10 @@ export function setStatus(element, message, variant = "") {
   }
 
   element.textContent = message;
-  element.classList.remove("status-success", "status-error", "is-hidden");
+  element.style.display = "block";  // ← Make sure it's visible
+  element.classList.remove("status-success", "status-error");
+  element.classList.remove("is-hidden");
+  
   if (variant === "success") {
     element.classList.add("status-success");
   }
