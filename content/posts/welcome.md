@@ -8,6 +8,8 @@ tags:
   - portfolio
   - introduction
   - Aidin
+  - education
+  - communication
 ---
 
 # Welcome
