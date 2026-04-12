@@ -16,13 +16,9 @@
     "summary": "An opening note for the portfolio and blog.",
     "author": "Dr. Aidin Jalilzadeh",
     "publishedAt": "2026-03-23T00:00:00.000Z",
-    "tags": [
-      "portfolio",
-      "introduction",
-      "Aidin"
-    ],
+    "tags": ["portfolio","introduction","Aidin"],
     "draft": false,
-    "body": "# Welcome",
+    "body": "Welcome",
     "file": "welcome.md"
   }
 ]
