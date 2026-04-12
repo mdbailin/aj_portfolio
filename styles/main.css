@@ -164,8 +164,8 @@ header.header {
    VIEWPORT-FILLING SECTIONS
    ============================================ */
 
-section {
-  min-height: 75vh;
+.page-home section {
+  min-height: 80vh;
   width: 100%;
   position: relative;
   display: flex;
